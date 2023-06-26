@@ -70,10 +70,10 @@ const response = await fetch('/api/pokemon', {
   body: JSON.stringify(data)
 });
 
-if (!response.ok) {
-  // fetch call was unsuccessful
-} else {
+if (response.ok) {
   // fetch call was successful
+} else {
+  // fetch call was unsuccessful
 }
 ```
 

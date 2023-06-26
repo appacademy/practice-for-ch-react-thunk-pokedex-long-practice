@@ -1,24 +1,28 @@
 
-# Pokedex Thunk
+# Pokedex, Part 2: Thunks
 
-In today's project you will configure an existing application to use thunk
-actions.
+In today's project you will complete your Pokedex application by configuring an
+existing frontend application to use thunk actions.
 
 ## Phase 0: Getting started
 
-You'll need the backend for the Pokedex application. Take a moment to clone the
-backend from [this repo]. Follow the instructions in the repo's README
-to set up the backend server. Start the backend server by running `npm start`.
+You'll want to have your Pokedex backend from Part 1 up and running. (You can
+download the Part 1 solution [here].) Unzip the solution, `cd` into the root
+directory, and run the following commands to boot it up:
 
-The API for the backend is also documented in that repository's README.
+* `bundle install`
+* `rails db:create db:migrate db:seed`
+* `rails s`
+
+The backend API is also documented in the solution's __Pokedex-API.md__ file.
 
 Once you have the backend up and running, clone the frontend starter from the
 `Download` link at the bottom of this page.
 
-Run `npm start` in the frontend starter repo to start your frontend development
-server.
+Run `npm install` and `npm start` in the frontend starter repo to start your
+frontend development server.
 
-[this repo]: https://github.com/appacademy/practice-for-sprint-15-pokedex-express-backend
+[here]: https://appacademy-open-assets.s3.us-west-1.amazonaws.com/modular-curriculum-practices/Y2gtcmVhY3QtcG9rZWRleC1yYWlscy1iYWNrZW5kLWxvbmctcHJhY3RpY2U.zip
 
 ### Explore the reference application
 
@@ -50,10 +54,7 @@ In this project, you will run two servers using these addresses:
 
 In the `package.json` file on your frontend, notice the
 `"proxy": "http://localhost:5000"`. This line tells the development server to
-proxy any unknown requests to your backend server port. So **you must always
-ensure that the `PORT` variable in your backend __.env__ file has the same
-port number as the proxy setting in your frontend __package.json__**. Remember:
-this approach only works in development using `npm start`.
+proxy any unknown requests to your backend server port.
 
 You will make API calls from your frontend to your backend server. When making
 API calls to your backend, don't write out your base URL for every call.
